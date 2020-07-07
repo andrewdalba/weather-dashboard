@@ -4,6 +4,11 @@ header{
     text-align: center;
 }
 
+body{
+    background-image: url(./images/sky.jpg);
+    opacity: .84;
+}
+
 .rockLeft{
     float: left;
 }
@@ -12,13 +17,26 @@ header{
     float: right;
 }
 
+.singleDayCard{
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+}
+
 .fiveDayCard{
     background-color: lightskyblue;
     min-width: 20%;
 }
-
-aside{
-    padding-left: 1%;
-    padding-right: 5%;
+.fiveDayForecast{
+    padding-bottom: 20px;
 }
 
+aside{
+    padding-left: 3%;
+    padding-right: 3%;
+    margin-left: 60px;
+    padding-bottom: 20px;
+}
+
+form{
+    margin-bottom: 15px;
+}

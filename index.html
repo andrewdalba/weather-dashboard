@@ -25,7 +25,11 @@
         <h1>Weather Dashboard</h1>
     </header>
     <aside class="rockLeft card">
-        <h1>search for city</h1>
+        <form>
+            <h1>Search for a City:</h1>
+            <input type="text" id="citySearch"  placeholder="Search">
+            <button type="submit">&#128270;</button>
+        </form>
         <ul class="list-group">
             <li class="list-group-item">Austin</li>
             <li class="list-group-item">Chicago</li>
@@ -36,19 +40,19 @@
     </aside>
 
     <main>
-        <section class="container card">
-            <h1>Weather</h1>
-            <p>Temperature: </p>
-            <p>Humidity: </p>
-            <p>Wind Speed: </p>
-            <p>UV index: </p>
+        <section class="container card singleDayCard">
+            <h1 class="card-title">Weather</h1>
+            <p class="card-text">Temperature: </p>
+            <p class="card-text">Humidity: </p>
+            <p class="card-text">Wind Speed: </p>
+            <p class="card-text">UV index: </p>
         </section>
 
-        <section class="container card">
-            <h1>5-Day Forecast</h1>
+        <section class="container card fiveDayForecast">
+            <h1>5-Day Forecast:</h1>
             <span class="container">
                 <div class="row card-group">
-                    <div class="card col-sm-12 col-lg-2 fiveDayCard">
+                    <div class="card col-sm-12 col-md-6 col-lg-2 fiveDayCard">
                         <div class="card-body">
                             <h3 class="card-title">Day 1</h3>
                             <img src="" alt="weather icon" class="card-img">
@@ -57,7 +61,7 @@
                         </div>
                     </div>
 
-                    <div class="card col-sm-12 col-lg-2 fiveDayCard">
+                    <div class="card col-sm-12 col-md-6 col-lg-2 fiveDayCard">
                         <div class="card-body">
                             <h3 class="card-title">Day 2</h3>
                             <img src="" alt="weather icon" class="card-img">
@@ -66,7 +70,7 @@
                         </div>
                     </div>
 
-                    <div class="card col-sm-12 col-lg-2 fiveDayCard">
+                    <div class="card col-sm-12 col-md-6 col-lg-2 fiveDayCard">
                         <div class="card-body">
                             <h3 class="card-title">Day 3</h3>
                             <img src="" alt="weather icon" class="card-img">
@@ -75,7 +79,7 @@
                         </div>
                     </div>
 
-                    <div class="card col-sm-12 col-lg-2 fiveDayCard">
+                    <div class="card col-sm-12 col-md-6 col-lg-2 fiveDayCard">
                         <div class="card-body">
                             <h3 class="card-title">Day 4</h3>
                             <img src="" alt="weather icon" class="card-img">
@@ -84,7 +88,7 @@
                         </div>
                     </div>
 
-                    <div class="card col-sm-12 col-lg-2 fiveDayCard">
+                    <div class="card col-sm-12 col-md-6 col-lg-2 fiveDayCard">
                         <div class="card-body">
                             <h3 class="card-title">Day 5</h3>
                             <img src="" alt="weather icon" class="card-img">
