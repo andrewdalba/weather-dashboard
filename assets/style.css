@@ -1,7 +1,12 @@
+*{
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+}
+
 header{
     background-color: rgba(21, 20, 68, 0.877);
     color: snow;
     text-align: center;
+    opacity: .84;
 }
 
 body{
@@ -31,12 +36,16 @@ body{
 }
 
 aside{
-    padding-left: 3%;
-    padding-right: 3%;
-    margin-left: 60px;
+    padding-left: 1%;
+    padding-right: 1%;
+    margin-left: 1%;
     padding-bottom: 20px;
 }
 
 form{
     margin-bottom: 15px;
+}
+
+#currentWeatherIcon{
+    width: 100px;
 }

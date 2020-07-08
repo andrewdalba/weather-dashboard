@@ -16,6 +16,7 @@
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./assets/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="./assets/main.js" defer></script>
     <title>Weather Dashboard</title>
 </head>
@@ -28,7 +29,7 @@
         <form>
             <h1>Search for a City:</h1>
             <input type="text" id="citySearch"  placeholder="Search">
-            <button type="submit">&#128270;</button>
+            <button type="button" id="searchBtn">&#128270;</button>
         </form>
         <ul class="list-group">
             <li class="list-group-item">Austin</li>
@@ -41,59 +42,60 @@
 
     <main>
         <section class="container card singleDayCard">
-            <h1 class="card-title">Weather</h1>
-            <p class="card-text">Temperature: </p>
-            <p class="card-text">Humidity: </p>
-            <p class="card-text">Wind Speed: </p>
-            <p class="card-text">UV index: </p>
+            <h1 class="card-title" id="city">Name of City (Date)</h1>
+            <img src="" alt="Weather Icon" id="currentWeatherIcon">
+            <p class="card-text" id="currentTemperature">Temperature: </p>
+            <p class="card-text" id="currentHumidity">Humidity: </p>
+            <p class="card-text" id="currentWindSpeed">Wind Speed: </p>
+            <p class="card-text" id="currentUvIndex">UV index: </p>
         </section>
 
         <section class="container card fiveDayForecast">
             <h1>5-Day Forecast:</h1>
             <span class="container">
                 <div class="row card-group">
-                    <div class="card col-sm-12 col-md-6 col-lg-2 fiveDayCard">
+                    <div class="card col-sm-12 col-md-6 col-lg-2 fiveDayCard" id="day1">
                         <div class="card-body">
                             <h3 class="card-title">Day 1</h3>
                             <img src="" alt="weather icon" class="card-img">
-                            <p class="card-text">Temp: </p>
-                            <p class="card-text">Humidity: </p>
+                            <p class="card-text temperature" id="temp1">Temp: </p>
+                            <p class="card-text humidity" id="humidity1">Humidity: </p>
                         </div>
                     </div>
 
-                    <div class="card col-sm-12 col-md-6 col-lg-2 fiveDayCard">
+                    <div class="card col-sm-12 col-md-6 col-lg-2 fiveDayCard" id="day2">
                         <div class="card-body">
                             <h3 class="card-title">Day 2</h3>
                             <img src="" alt="weather icon" class="card-img">
-                            <p class="card-text">Temp: </p>
-                            <p class="card-text">Humidity: </p>
+                            <p class="card-text temperature" id="temp2">Temp: </p>
+                            <p class="card-text humidity" id="humidity2">Humidity: </p>
                         </div>
                     </div>
 
-                    <div class="card col-sm-12 col-md-6 col-lg-2 fiveDayCard">
+                    <div class="card col-sm-12 col-md-6 col-lg-2 fiveDayCard" id="day3">
                         <div class="card-body">
                             <h3 class="card-title">Day 3</h3>
                             <img src="" alt="weather icon" class="card-img">
-                            <p class="card-text">Temp: </p>
-                            <p class="card-text">Humidity: </p>
+                            <p class="card-text temperature" id="temp3">Temp: </p>
+                            <p class="card-text humidity" id="humidity3">Humidity: </p>
                         </div>
                     </div>
 
-                    <div class="card col-sm-12 col-md-6 col-lg-2 fiveDayCard">
+                    <div class="card col-sm-12 col-md-6 col-lg-2 fiveDayCard" id="day4">
                         <div class="card-body">
                             <h3 class="card-title">Day 4</h3>
                             <img src="" alt="weather icon" class="card-img">
-                            <p class="card-text">Temp: </p>
-                            <p class="card-text">Humidity: </p>
+                            <p class="card-text temperature" id="temp4">Temp: </p>
+                            <p class="card-text humidity" id="humidity4">Humidity: </p>
                         </div>
                     </div>
 
-                    <div class="card col-sm-12 col-md-6 col-lg-2 fiveDayCard">
+                    <div class="card col-sm-12 col-md-6 col-lg-2 fiveDayCard" id="day5">
                         <div class="card-body">
                             <h3 class="card-title">Day 5</h3>
                             <img src="" alt="weather icon" class="card-img">
-                            <p class="card-text">Temp: </p>
-                            <p class="card-text">Humidity: </p>
+                            <p class="card-text temperature" id="temp5">Temp: </p>
+                            <p class="card-text humidity" id="humidity5">Humidity: </p>
                         </div>
                     </div>
                 </div>
@@ -108,7 +110,7 @@
 
 
 
-
+ <!-- <script src="./assets/main.js"></script> -->
 </body>
 
 </html>
