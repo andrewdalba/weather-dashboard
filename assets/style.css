@@ -49,3 +49,7 @@ form{
 #currentWeatherIcon{
     width: 100px;
 }
+
+.icon{
+    width: 70px;
+}
