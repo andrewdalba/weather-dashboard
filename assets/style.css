@@ -53,3 +53,23 @@ form{
 .icon{
     width: 70px;
 }
+
+.button:hover{
+    background-color: lightyellow;
+}
+
+.green{
+background-color: green;
+}
+
+.orange{
+background-color: orange;
+}
+
+.yellow{
+background-color: yellow;
+}
+
+.red{
+    background-color: red;
+}
