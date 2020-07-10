@@ -1,17 +1,18 @@
 var apiKey = "f2db8e1b3757f3e4e3db807ed339605e";
 var date = moment().format("MMMM Do");
-var currentDate = "7/7/2020";
 var city = "new York";
 var lat;
 var lon;
+// array that will hold the User-entered cities
 var cities = [];
 
-// $(window).on("ready", renderList);
 
+// update Time
 for (var i = 0; i < 5; i++) {
     $(`#date${i + 1}`).text(moment().add(i, 'days').format("dddd, (MMMM Do)"));
 };
 
+// controls what happens when a city in the list is clicked
  function buttonControl (x) {
     var citySelect = cities[x];
     console.log(citySelect);
@@ -21,7 +22,7 @@ for (var i = 0; i < 5; i++) {
 };
 
 
-
+// controls what happens when the search button is clicked
 $("#searchBtn").on("click", function () {
     city = $("#citySearch").val();
     updateCurrentWeather();
@@ -32,7 +33,7 @@ $("#searchBtn").on("click", function () {
 });
 
 
-
+// updates the current weather section
 function updateCurrentWeather() {
     var queryURL = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&appid=${apiKey}`;
     $.ajax({
@@ -53,6 +54,7 @@ function updateCurrentWeather() {
         });
 };
 
+// updates each card in the five day forecast section
 function updateFiveDayForecast() {
     var queryURL = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&appid=${apiKey}`;
     $.ajax({
@@ -72,6 +74,7 @@ function updateFiveDayForecast() {
         });
 };
 var uvIndex;
+// adds/removes classes depending on the UV index in order to change the color of the badge
 function changeColors() {
     $("#currentUvIndex").removeClass("green");
     $("#currentUvIndex").removeClass("yellow");
@@ -91,6 +94,7 @@ function changeColors() {
     }
 };
 
+// updates the UV index
 function updateUvIndex() {
     var queryURL = `https://api.openweathermap.org/data/2.5/uvi?&appid=${apiKey}&lat=` + lat + "&lon=" + lon;
     $.ajax({
@@ -112,7 +116,7 @@ function storeCities() {
     localStorage.setItem("cities", JSON.stringify(cities));
 };
 
-
+// creates list of user-entered cities
 function renderList() {
     $("#cityList").empty();
     for (var i = 0; i < cities.length; i++) {
