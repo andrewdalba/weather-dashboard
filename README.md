@@ -5,4 +5,4 @@ the app also features a 5-day forecast section
 The UV index box changes colors depending on how high the index is for that day. 
 
 # Screenshot of Working Application
-<img src = "./assets/images/weatherDashboardScreenShot.Png"></img>
+<img src = "./assets/images/weatherDashboardScreenShot.PNG" alt = "ScreenShot"></img>
