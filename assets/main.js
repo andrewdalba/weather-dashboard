@@ -13,7 +13,7 @@ for (var i = 0; i < 5; i++) {
 };
 
 // controls what happens when a city in the list is clicked
- function buttonControl (x) {
+function buttonControl(x) {
     var citySelect = cities[x];
     console.log(citySelect);
     city = citySelect;
@@ -123,14 +123,23 @@ function renderList() {
         var a = $("<li>");
         a.addClass("list-group-item");
         a.addClass("button");
+        a.attr("id", `listItem${i}`);
         a.attr("type", "button");
         a.attr("onClick", `buttonControl(${i})`);
         a.text(cities[i]);
         $("#cityList").append(a);
         // add a delete button
-        var deleteButton = '<span class="rockRight" style="padding:0"><button class="smBtn" id="smBtn' + i + '">&times;</button></span>';
+        var deleteButton = `<span class="rockRight" style="padding:0"><button onClick = "deleteFunc(${i})" class="smBtn" id="smBtn${i}">&times;</button></span>`;
         a.append(deleteButton);
+
     };
+};
+
+function deleteFunc(x) {
+    console.log("here");
+    cities.splice(x, 1);
+    storeCities();
+    renderList();
 };
 
 // pulling the copy of the preset cities from Local storage
