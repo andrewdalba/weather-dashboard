@@ -2,6 +2,11 @@
     font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 }
 
+.container{
+    margin-right: 5%;
+    /* position: static; */
+}
+
 header{
     background-color: rgba(21, 20, 68, 0.877);
     color: snow;
@@ -60,16 +65,20 @@ form{
 
 .green{
 background-color: green;
+color: white;
 }
 
 .orange{
 background-color: orange;
+color: white;
 }
 
 .yellow{
 background-color: yellow;
+color: white;
 }
 
 .red{
     background-color: red;
+    color: white;
 }

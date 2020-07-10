@@ -20,6 +20,8 @@ for (var i = 0; i < 5; i++) {
     updateFiveDayForecast();
 };
 
+
+
 $("#searchBtn").on("click", function () {
     city = $("#citySearch").val();
     updateCurrentWeather();
@@ -98,7 +100,7 @@ function updateUvIndex() {
         .then(function (response) {
             console.log(queryURL);
             console.log(response);
-            $("#currentUvIndex").text("UV Index: " + response.value);
+            $("#currentUvIndex").text(response.value);
             uvIndex = response.value;
             changeColors();
         });
@@ -110,6 +112,7 @@ function storeCities() {
     localStorage.setItem("cities", JSON.stringify(cities));
 };
 
+
 function renderList() {
     $("#cityList").empty();
     for (var i = 0; i < cities.length; i++) {
@@ -120,6 +123,9 @@ function renderList() {
         a.attr("onClick", `buttonControl(${i})`);
         a.text(cities[i]);
         $("#cityList").append(a);
+        // add a delete button
+        var deleteButton = '<span class="rockRight" style="padding:0"><button class="smBtn" id="smBtn' + i + '">&times;</button></span>';
+        a.append(deleteButton);
     };
 };
 

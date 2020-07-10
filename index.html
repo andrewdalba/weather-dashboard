@@ -27,23 +27,23 @@
     </header>
     <aside class="rockLeft card">
         <form>
-            <h1>Search for a City:</h1>
-            <input type="text" id="citySearch"  placeholder="Search">
+            <h4>Search for a City:</h4>
+            <input type="text" id="citySearch" placeholder="Search">
             <button class="button" type="button" id="searchBtn">&#128270;</button>
         </form>
         <ul class="list-group" id="cityList">
-            
+
         </ul>
     </aside>
-
-    <main>
+    <main class="container">
         <section class="container card singleDayCard">
             <h1 class="card-title" id="city">Name of City (Date)</h1>
             <img src="" alt="Weather Icon" id="currentWeatherIcon">
             <p class="card-text" id="currentTemperature">Temperature: </p>
             <p class="card-text" id="currentHumidity">Humidity: </p>
             <p class="card-text" id="currentWindSpeed">Wind Speed: </p>
-            <p class="card-text" id="currentUvIndex">UV index: </p>
+            <p class="card-text">UV index: <span id="currentUvIndex" class="badge"> </span></p>
+            <span></span>
         </section>
 
         <section class="container card fiveDayForecast">
@@ -106,7 +106,7 @@
 
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 </body>
 
 </html>
